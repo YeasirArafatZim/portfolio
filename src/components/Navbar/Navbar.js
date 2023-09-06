@@ -9,7 +9,7 @@ import { FaBars, FaFontAwesome, FaGitSquare } from 'react-icons/fa';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { BsPersonVcardFill } from 'react-icons/bs';
 import { ImLinkedin } from 'react-icons/im';
-import { SiGmail } from 'react-icons/si'; 
+import { SiGmail } from 'react-icons/si';
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -74,7 +74,7 @@ export default function Navbar() {
               <Image
                 src="/img/profile.jpg"
                 alt="Picture of the author"
-                width={200}
+                width={220}
                 height={300}
                 // layout='responsive'
                 className={'rounded-circle border mx-auto'}
@@ -154,11 +154,7 @@ export default function Navbar() {
 
         {/* <!-- Dark Mode Section  --> */}
 
-        <input
-          type="checkbox"
-          id="dark-mode"
-          onClick={toggleDarkMode}
-        />
+        <input type="checkbox" id="dark-mode" onClick={toggleDarkMode} />
         <label
           htmlFor="dark-mode"
           className={`${styles.navIcon} ${styles.darkMode}`}
@@ -167,7 +163,7 @@ export default function Navbar() {
         </label>
 
         {/* <!-- Logo Section  --> */}
-        <Link href={'/'}>
+        <Link href={'/'} passHref>
           <label className={'logo'}>
             <h3 id={styles.md}>
               <strong>Md. </strong>{' '}

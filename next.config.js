@@ -7,6 +7,9 @@ const nextConfig = {
   experimental: {
     externalDir: true
   },
+  images: {
+    unoptimized: true
+}
 }
  
 module.exports = nextConfig
