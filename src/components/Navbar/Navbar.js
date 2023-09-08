@@ -1,30 +1,23 @@
 'use client'; // This is a client component
 import styles from './Navbar.module.css';
 import darkStyles from './DarkNavbar.module.css';
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // FontAwesome Icons
-import { FaBars, FaFontAwesome, FaGitSquare } from 'react-icons/fa';
-import { MdOutlineDarkMode } from 'react-icons/md';
-import { BsPersonVcardFill } from 'react-icons/bs';
+import { FaBars, FaGitSquare } from 'react-icons/fa';
+import { RiMoonFill } from 'react-icons/ri';
+import { BsPersonVcardFill, BsBrightnessHighFill } from 'react-icons/bs';
 import { ImLinkedin } from 'react-icons/im';
 import { SiGmail } from 'react-icons/si';
 
-export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleDarkMode = () => {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
-    console.log(darkMode);
-  };
-
+export default function Navbar({ darkMode, toggleDarkMode }) {
   const uncheckedSideMenu = () => {
     document.getElementById('check-box').checked = false;
   };
 
   return (
     <>
-      <nav className={`sticky-top`}>
+      <nav className={`sticky-top ${darkMode ? darkStyles.nav : ''}`}>
         <input type="checkbox" id="check-box" />
         <label htmlFor="check-box" className={'checkbtn'}>
           {/* <i className={"fa fa-bars"}></i> */}
@@ -34,7 +27,6 @@ export default function Navbar() {
         {/* <!-- Offcanvas Section --> */}
         <button
           className={`navbar-toggler ${styles.navIcon} ${styles.address}`}
-          // style={{float: 'right', marginRight: '20px', marginLeft: '20px'}}
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -47,6 +39,7 @@ export default function Navbar() {
           // tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
+          data-bs-theme="dark"
         >
           <div className={'offcanvas-header'}>
             <h5
@@ -65,18 +58,11 @@ export default function Navbar() {
           </div>
           <div className={'offcanvas-body'}>
             <div className={'container'}>
-              {/* <img
-                className={'rounded-circle border mx-auto'}
-                style={{ display: 'block', height: '40vh' }}
-                src="./img/profile.jpg"
-                alt=""
-              /> */}
               <Image
-                src="/img/profile.jpg"
+                src="./img/profile.jpg"
                 alt="Picture of the author"
                 width={220}
                 height={300}
-                // layout='responsive'
                 className={'rounded-circle border mx-auto'}
                 style={{ display: 'block', height: '40vh' }}
               />
@@ -154,16 +140,21 @@ export default function Navbar() {
 
         {/* <!-- Dark Mode Section  --> */}
 
-        <input type="checkbox" id="dark-mode" onClick={toggleDarkMode} />
+        <input
+          type="checkbox"
+          id="dark-mode"
+          // onClick={toggleDarkMode}
+          onClick={toggleDarkMode}
+        />
         <label
           htmlFor="dark-mode"
           className={`${styles.navIcon} ${styles.darkMode}`}
         >
-          <MdOutlineDarkMode />
+          {darkMode ? <BsBrightnessHighFill /> : <RiMoonFill />}
         </label>
 
         {/* <!-- Logo Section  --> */}
-        <Link href={'/'} passHref>
+        <Link href={'#'}>
           <label className={'logo'}>
             <h3 id={styles.md}>
               <strong>Md. </strong>{' '}

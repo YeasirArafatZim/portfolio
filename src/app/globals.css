@@ -6,7 +6,7 @@ body {
   user-select: none;
 }
 nav {
-  background: #ffffff;
+  background: #212f3d;
   height: 80px;
   box-shadow: 0.1px 0.1px 10px grey;
 }
@@ -21,7 +21,7 @@ nav {
 } */
 .checkbtn {
   font-size: 25px;
-  color: rgb(53, 49, 49);
+  color: #808b96;
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -31,12 +31,12 @@ nav {
   display: none;
 }
 .checkbtn:hover {
-  color: rgb(19, 124, 194);
+  color: #d5d8dc;
   cursor: pointer;
   text-shadow: 0.1px 0.1px 10px grey;
 }
 label.logo {
-  color: #5d6d7e;
+  color: #808b96;
   font-size: 30px;
   line-height: 80px;
   padding-left: 80px;
@@ -47,7 +47,7 @@ label.logo {
   position: absolute;
 }
 label.logo:hover {
-  color: #34495e;
+  color: #d5d8dc;
   cursor: pointer;
   /* text-shadow: 0.1px 0.1px 10px grey; */
 }
@@ -62,7 +62,7 @@ nav ul li {
 }
 nav ul li a {
   position: relative;
-  color: rgb(87, 83, 83);
+  color: #f39c12;
   font-size: 18px;
   font-weight: 600;
   padding: 7px 13px;
@@ -78,13 +78,13 @@ nav ul li a:before {
   top: 30px;
   height: 2px;
   width: 100%;
-  background: rgb(231, 218, 35);
+  background: #d5d8dc;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s linear;
 }
 nav ul li a:hover {
-  color: #039132;
+  color: #3498db;
   /* text-shadow: 0px 0px 7px grey; */
 }
 
@@ -124,6 +124,7 @@ nav ul li a:hover:before {
   }
   nav ul li a {
     font-size: 20px;
+    color: #2c3e50;
   }
   nav ul li a:hover,
   nav ul li a.active {
