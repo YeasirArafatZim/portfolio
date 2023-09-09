@@ -154,16 +154,17 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </label>
 
         {/* <!-- Logo Section  --> */}
-        <Link href={'#'}>
-          <label className={'logo'}>
+
+        <label className={'logo'}>
+          <Link href={'#'}>
             <h3 id={styles.md}>
               <strong>Md. </strong>{' '}
             </h3>
             <h3 id={styles.yeasir}>
               <strong>Yeasir Arafat</strong>{' '}
             </h3>
-          </label>
-        </Link>
+          </Link>
+        </label>
         <ul style={{ marginBottom: '0px' }}>
           <li>
             <Link href={'#about'} onClick={uncheckedSideMenu}>
