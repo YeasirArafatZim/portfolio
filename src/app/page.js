@@ -1,5 +1,8 @@
 'use client'; // This is a client component
 import Navbar from '@/components/Navbar/Navbar';
+import Top from '@/components/Top/Top';
+import Projects from '@/components/Projects/Projects';
+import Contact from '@/components/Contact';
 import { useState } from 'react';
 
 export default function Home() {
@@ -9,7 +12,7 @@ export default function Home() {
   };
 
   const darkStyle = {
-    backgroundColor: '#0f1014',
+    backgroundColor: '#0F0F0F',
     color: 'white',
     transition: 'background-color 1s ease',
   };
@@ -20,10 +23,14 @@ export default function Home() {
     <>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main style={darkMode ? darkStyle : tran}>
-        <h1 style={{ paddingBottom: '800px' }}>this is page content</h1>
-        <div style={{ height: '900px' }}>
-          {/* <iframe src='https://my.spline.design/untitled-498c2ed4ce8c3e1c397f362b61dea097/' frameBorder='0' width='100%' height='100%'></iframe> */}
-        </div>
+        <Top />
+        <Projects />
+        <Contact darkMode={darkMode}/>
+        
+        {/* <div style={{ height: '900px' }}>
+          <iframe src='https://my.spline.design/untitled-498c2ed4ce8c3e1c397f362b61dea097/' frameBorder='0' width='100%' height='100%'></iframe>
+        </div> */}
+        
       </main>
     </>
   );

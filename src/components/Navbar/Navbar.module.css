@@ -179,4 +179,10 @@
     top: 120px;
   }
 }
+
+/* Navbar DarkMode  */
+.navDark {
+  box-shadow: none;
+}
+
 /* Navigation bar END  */

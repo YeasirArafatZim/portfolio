@@ -18,6 +18,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         {children}

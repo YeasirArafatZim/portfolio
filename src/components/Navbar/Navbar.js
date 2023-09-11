@@ -1,6 +1,5 @@
 'use client'; // This is a client component
 import styles from './Navbar.module.css';
-import darkStyles from './DarkNavbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 // FontAwesome Icons
@@ -17,7 +16,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
   return (
     <>
-      <nav className={`sticky-top ${darkMode ? darkStyles.nav : ''}`}>
+      <nav className={`sticky-top ${darkMode ? styles.navDark : ''}`}>
         <input type="checkbox" id="check-box" />
         <label htmlFor="check-box" className={'checkbtn'}>
           {/* <i className={"fa fa-bars"}></i> */}
@@ -156,7 +155,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         {/* <!-- Logo Section  --> */}
 
         <label className={'logo'}>
-          <Link href={'#'}>
+          <Link href={'#top'}>
             <h3 id={styles.md}>
               <strong>Md. </strong>{' '}
             </h3>

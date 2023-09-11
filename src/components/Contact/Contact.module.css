@@ -1,0 +1,115 @@
+.contain {
+  margin-top: 68px;
+  padding-bottom: 68px;
+}
+.email {
+  font-family: 'Poppins';
+  font-size: 30px;
+  color: #222a41;
+  font-weight: bold;
+  margin-top: 43px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.label {
+  font-family: 'Poppins';
+  font-size: 16px;
+  color: #232323;
+  margin-bottom: 9px;
+  margin-left: 10px;
+}
+.msg {
+  height: 183px !important;
+  padding-top: 15px;
+}
+.input {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  border: solid 1px #e8e8e8;
+  height: 60px;
+  margin: 9px 0px 20px;
+  padding-left: 15px;
+}
+.input:focus {
+  outline: none;
+  border: solid 1px #afacac;
+}
+.btn {
+  font-size: 16px;
+  height: 60px;
+  width: 160px;
+  border-radius: 5px;
+  background-color: #ff4c0a;
+  color: white !important;
+}
+
+.btn:hover {
+  background-color: #ff4400 !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.submitDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-top: 37px;
+}
+.successful {
+  margin-bottom: 0px;
+  margin-right: 25px;
+  color: rgb(0, 221, 0);
+}
+
+@media screen and (max-width: 1200px) {
+  .email {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .submitDiv {
+    margin-top: 0px;
+  }
+  .email {
+    margin-bottom: 20px;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .label {
+    font-size: 14px;
+  }
+  .input {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .email {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 362px) {
+  .successful {
+    margin-bottom: 15px;
+  }
+}
+/* Dark Mode  */
+.emailDark {
+  color: #ffffff;
+}
+.labelDark {
+  color: #f5f5f5;
+}
+.inputDark {
+  background-color: #6965653f;
+  border: solid 1px #929292;
+}
+.inputDark:focus {
+  border: solid 1px #ffffff;
+}
+.btnDark:hover {
+  /* background-color: #ff4400 !important; */
+  box-shadow: rgba(197, 197, 197, 0.349) 0px 3px 8px;
+}
