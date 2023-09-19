@@ -63,7 +63,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 width={220}
                 height={300}
                 className={'rounded-circle border mx-auto'}
-                style={{ display: 'block', height: '40vh' }}
+                style={{ display: 'block', height: '40vh', width: 'auto' }}
               />
             </div>
             <div className={'container'}>
@@ -164,24 +164,43 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             </h3>
           </Link>
         </label>
-        <ul style={{ marginBottom: '0px' }}>
+        <ul
+          style={{ marginBottom: '0px' }}
+          className={darkMode ? styles.ulNavDark : ''}
+        >
           <li>
-            <Link href={'#about'} onClick={uncheckedSideMenu}>
+            <Link
+              href={'#about'}
+              onClick={uncheckedSideMenu}
+              className={`${darkMode ? styles.linkDark : ''}`}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href={'#projects'} onClick={uncheckedSideMenu}>
+            <Link
+              href={'#projects'}
+              onClick={uncheckedSideMenu}
+              className={`${darkMode ? styles.linkDark : ''}`}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link href={'#more'} onClick={uncheckedSideMenu}>
+            <Link
+              href={'#more'}
+              onClick={uncheckedSideMenu}
+              className={`${darkMode ? styles.linkDark : ''}`}
+            >
               More
             </Link>
           </li>
           <li>
-            <Link href={'#contact'} onClick={uncheckedSideMenu}>
+            <Link
+              href={'#contact'}
+              onClick={uncheckedSideMenu}
+              className={`${darkMode ? styles.linkDark : ''}`}
+            >
               Contact
             </Link>
           </li>
