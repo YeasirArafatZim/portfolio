@@ -6,9 +6,9 @@ body {
   user-select: none;
 }
 nav {
-  background: #212f3d;
+  background: rgb(107, 107, 107);
   height: 80px;
-  box-shadow: 0.1px 0.1px 10px grey;
+  transition: background-color 1s ease;
 }
 #check-box {
   display: none;
@@ -16,12 +16,9 @@ nav {
 #dark-mode {
   display: none;
 }
-/* #dark-mode:checked ~ nav {
-  background-color: red;
-} */
 .checkbtn {
   font-size: 25px;
-  color: #808b96;
+  color: #c0c7ce;
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -36,7 +33,7 @@ nav {
   text-shadow: 0.1px 0.1px 10px grey;
 }
 label.logo a {
-  color: #808b96;
+  color: #c0c7ce;
   padding-left: 80px;
   font-family: 'Lobster';
   display: flex;
@@ -60,7 +57,7 @@ nav ul li {
 }
 nav ul li a {
   position: relative;
-  color: #f39c12;
+  color: white;
   font-size: 18px;
   font-weight: 600;
   padding: 7px 13px;
@@ -76,14 +73,15 @@ nav ul li a:before {
   top: 30px;
   height: 2px;
   width: 100%;
-  background: #d5d8dc;
+  background: #ff4c0a;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s linear;
 }
 nav ul li a:hover {
-  color: #3498db;
-  /* text-shadow: 0px 0px 7px grey; */
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.637) 0px 5px 15px;
+  /* text-shadow: 0px 0px 7px grey;box-shadow: ; */
 }
 
 nav ul li a:hover:before {

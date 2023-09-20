@@ -11,21 +11,28 @@ import { SiGmail } from 'react-icons/si';
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
   const uncheckedSideMenu = () => {
-    document.getElementById('check-box').checked = false;
+    const elementToUnchecked = document.getElementById('check-box');
+    if (elementToUnchecked) {
+      elementToUnchecked.checked = false;
+    }
   };
 
   return (
     <>
       <nav className={`sticky-top ${darkMode ? styles.navDark : ''}`}>
         <input type="checkbox" id="check-box" />
-        <label htmlFor="check-box" className={'checkbtn'}>
-          {/* <i className={"fa fa-bars"}></i> */}
+        <label
+          htmlFor="check-box"
+          className={`checkbtn ${darkMode ? styles.darkChkBtn : ''}`}
+        >
           <FaBars />
         </label>
 
         {/* <!-- Offcanvas Section --> */}
         <button
-          className={`navbar-toggler ${styles.navIcon} ${styles.address}`}
+          className={`navbar-toggler ${styles.navIcon} ${
+            darkMode ? styles.navIconDark : ''
+          } ${styles.address}`}
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -35,10 +42,10 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </button>
         <div
           className={'offcanvas offcanvas-end'}
-          // tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
-          data-bs-theme="dark"
+          data-bs-theme={darkMode ? 'dark' : ''}
+          data-bs-scroll="true"
         >
           <div className={'offcanvas-header'}>
             <h5
@@ -139,23 +146,20 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
         {/* <!-- Dark Mode Section  --> */}
 
-        <input
-          type="checkbox"
-          id="dark-mode"
-          // onClick={toggleDarkMode}
-          onClick={toggleDarkMode}
-        />
+        <input type="checkbox" id="dark-mode" onClick={toggleDarkMode} />
         <label
           htmlFor="dark-mode"
-          className={`${styles.navIcon} ${styles.darkMode}`}
+          className={`${styles.navIcon} ${darkMode ? styles.navIconDark : ''} ${
+            styles.darkMode
+          }`}
         >
           {darkMode ? <BsBrightnessHighFill /> : <RiMoonFill />}
         </label>
 
         {/* <!-- Logo Section  --> */}
 
-        <label className={'logo'}>
-          <Link href={'#top'}>
+        <label className={`logo ${darkMode ? styles.logoDark : ''}`}>
+          <Link href={'#top'} onClick={uncheckedSideMenu}>
             <h3 id={styles.md}>
               <strong>Md. </strong>{' '}
             </h3>

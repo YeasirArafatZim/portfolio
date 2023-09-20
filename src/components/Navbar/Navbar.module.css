@@ -5,7 +5,7 @@
   margin-left: 30px;
   float: right;
   margin-top: 17px;
-  color: #808b96;
+  color: #c0c7ce;
   cursor: pointer;
 }
 .address {
@@ -123,7 +123,7 @@
   .linkDark:hover {
     color: white;
   }
-  .ulNavDark{
+  .ulNavDark {
     background-color: #204063;
   }
 }
@@ -191,7 +191,16 @@
 
 /* Navbar DarkMode  */
 .navDark {
-  box-shadow: none;
+  background-color: #212f3d;
+  transition: background-color 1s ease;
 }
-
+.navIconDark {
+  color: #808b96;
+}
+.logoDark {
+  color: #808b96;
+}
+.darkChkBtn {
+  color: #808b96;
+}
 /* Navigation bar END  */
