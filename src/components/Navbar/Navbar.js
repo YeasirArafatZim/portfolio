@@ -2,6 +2,7 @@
 import styles from './Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 // FontAwesome Icons
 import { FaBars, FaGitSquare } from 'react-icons/fa';
 import { RiMoonFill } from 'react-icons/ri';
@@ -147,13 +148,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         {/* <!-- Dark Mode Section  --> */}
 
         <input type="checkbox" id="dark-mode" onClick={toggleDarkMode} />
-        <label
-          htmlFor="dark-mode"
-          className={`${styles.navIcon} ${darkMode ? styles.navIconDark : ''} ${
-            styles.darkMode
-          }`}
-        >
-          {darkMode ? <BsBrightnessHighFill /> : <RiMoonFill />}
+        <label className={styles.darkMode}>
+          <ToggleSwitch darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </label>
 
         {/* <!-- Logo Section  --> */}
