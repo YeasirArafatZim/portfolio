@@ -20,12 +20,6 @@
   color: #d5d8dc;
 }
 
-.dark {
-  background-color: rgb(29, 25, 25);
-  color: blanchedalmond;
-  transition: background 0.5s linear;
-}
-
 #canvasText {
   text-align: center;
   font-size: 18px;
@@ -35,89 +29,7 @@
 .link_icon:hover {
   font-size: 40px !important;
 }
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: absolute;
-  min-height: 100%;
-  min-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Add some content at the bottom of the video/page */
-.videoContent {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 60%;
-  padding: 20px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#name {
-  color: white;
-  text-align: center;
-}
-#designation {
-  font-size: 20px;
-  text-align: center;
-}
-.topic_head {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.box {
-  box-shadow: 5px 5px 10px grey;
-}
-.box:hover {
-  box-shadow: 10px 10px 10px grey;
-  transform: scale(1.02) !important;
-}
-.about_img {
-  width: 200px;
-  border-radius: 5px;
-  border: 5px solid rgb(255, 255, 255);
-  text-align: center;
-  margin-bottom: 30px;
-}
-.about_content {
-  text-align: justify;
-  color: #333333;
-  font-size: 22px;
-}
-
-@media (max-width: 1000px) {
-  #name {
-    font-size: 20px;
-  }
-  #designation {
-    font-size: 18px;
-  }
-  .videoContent {
-    top: 280px;
-  }
-  .about_img {
-    width: 150px;
-    border: 4px solid rgb(255, 255, 255);
-  }
-  .about_content {
-    font-size: 18px;
-  }
-}
 @media (max-width: 858px) {
-  #name {
-    font-size: 18px;
-  }
-  #designation {
-    font-size: 16px;
-  }
-  .videoContent {
-    top: 230px;
-  }
   .linkDark {
     color: rgb(173, 173, 173);
   }
@@ -139,27 +51,6 @@
   #md {
     display: none;
   }
-  #name {
-    font-size: 16px;
-  }
-  #designation {
-    font-size: 14px;
-  }
-  .videoContent {
-    top: 140px;
-  }
-  .topic_head {
-    margin-top: 10px;
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  .about_img {
-    width: 100px;
-    border: 2px solid rgb(255, 255, 255);
-  }
-  .about_content {
-    font-size: 15px;
-  }
 }
 
 @media (max-width: 380px) {
@@ -175,18 +66,6 @@
   }
   #canvasText {
     padding-top: 20px;
-  }
-
-  #name {
-    font-size: 14px;
-  }
-  #designation {
-    font-size: 12px;
-    margin-bottom: 0px;
-  }
-  .videoContent {
-    padding: 10px;
-    top: 120px;
   }
 }
 
