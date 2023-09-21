@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Top from '@/components/Top/Top';
 import Projects from '@/components/Projects/Projects';
 import Contact from '@/components/Contact';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useState } from 'react';
 
 export default function Home() {
@@ -25,12 +26,12 @@ export default function Home() {
       <main style={darkMode ? darkStyle : tran}>
         <Top />
         <Projects />
-        <Contact darkMode={darkMode}/>
-        
+        <Contact darkMode={darkMode} />
+
         {/* <div style={{ height: '900px' }}>
           <iframe src='https://my.spline.design/untitled-498c2ed4ce8c3e1c397f362b61dea097/' frameBorder='0' width='100%' height='100%'></iframe>
         </div> */}
-        
+        <ScrollToTop darkMode={darkMode} />
       </main>
     </>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 import styles from './Top.module.css';
 
 const Top = () => {
@@ -19,7 +19,9 @@ const Top = () => {
             profound understanding of web applications. I thrive on transforming
             creative ideas into functional, user-friendly web applications.
           </p>
-          <button className={`btn ${styles.btn}`}>CONTACT ME</button>
+          <Link href={'#contact'}>
+            <button className={`btn ${styles.btn}`}>CONTACT ME</button>
+          </Link>
         </div>
       </div>
     </>
