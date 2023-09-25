@@ -4,12 +4,12 @@
 const nextConfig = {
   /* config options here */
   output: 'export',
-  experimental: {
-    externalDir: true
-  },
+  // experimental: {
+  //   externalDir: true
+  // },
   images: {
-    unoptimized: true
-}
-}
- 
-module.exports = nextConfig
+    unoptimized: true,
+  },
+};
+
+module.exports = nextConfig;
