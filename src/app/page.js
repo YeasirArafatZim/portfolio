@@ -29,7 +29,12 @@ export default function Home() {
         <Contact darkMode={darkMode} />
 
         {/* <div style={{ height: '900px' }}>
-          <iframe src='https://my.spline.design/untitled-498c2ed4ce8c3e1c397f362b61dea097/' frameBorder='0' width='100%' height='100%'></iframe>
+          <iframe
+            src="https://my.spline.design/untitled-498c2ed4ce8c3e1c397f362b61dea097/"
+            frameBorder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
         </div> */}
         <ScrollToTop darkMode={darkMode} />
       </main>

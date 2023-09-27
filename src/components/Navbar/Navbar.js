@@ -5,8 +5,7 @@ import Link from 'next/link';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 // FontAwesome Icons
 import { FaBars, FaGitSquare } from 'react-icons/fa';
-import { RiMoonFill } from 'react-icons/ri';
-import { BsPersonVcardFill, BsBrightnessHighFill } from 'react-icons/bs';
+import { BsPersonVcardFill } from 'react-icons/bs';
 import { ImLinkedin } from 'react-icons/im';
 import { SiGmail } from 'react-icons/si';
 
@@ -20,11 +19,13 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
   return (
     <>
-      <nav className={`sticky-top ${darkMode ? styles.navDark : ''}`}>
-        <input type="checkbox" id="check-box" />
+      <nav
+        className={`sticky-top ${styles.nav} ${darkMode ? styles.navDark : ''}`}
+      >
+        <input type="checkbox" id="check-box" className={styles.checkBox} />
         <label
           htmlFor="check-box"
-          className={`checkbtn ${darkMode ? styles.darkChkBtn : ''}`}
+          className={`${styles.checkbtn} ${darkMode ? styles.darkChkBtn : ''}`}
         >
           <FaBars />
         </label>
@@ -147,14 +148,19 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
         {/* <!-- Dark Mode Section  --> */}
 
-        <input type="checkbox" id="dark-mode" onClick={toggleDarkMode} />
+        <input
+          type="checkbox"
+          id="dark-mode"
+          className={styles.darkBtn}
+          onClick={toggleDarkMode}
+        />
         <label className={styles.darkMode}>
           <ToggleSwitch darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </label>
 
         {/* <!-- Logo Section  --> */}
 
-        <label className={`logo ${darkMode ? styles.logoDark : ''}`}>
+        <label className={`${styles.logo} ${darkMode ? styles.logoDark : ''}`}>
           <Link href={'#top'} onClick={uncheckedSideMenu}>
             <h3 id={styles.md}>
               <strong>Md. </strong>{' '}
