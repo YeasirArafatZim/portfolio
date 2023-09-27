@@ -1,4 +1,4 @@
-import emoji from 'react-easy-emoji';
+import { Icon } from '@iconify/react';
 import styles from './ToggleSwitch.module.css';
 
 const ToggleSwitch = ({ darkMode, toggleDarkMode }) => {
@@ -12,7 +12,9 @@ const ToggleSwitch = ({ darkMode, toggleDarkMode }) => {
       />
       <span className={`${styles.slider} ${styles.round}`}>
         <span className={styles.emoji}>
-          {darkMode ? emoji('🌜') : emoji('☀️')}
+          <Icon
+            icon={darkMode ? 'noto-v1:last-quarter-moon-face' : 'noto:sun'}
+          />
         </span>
       </span>
     </label>

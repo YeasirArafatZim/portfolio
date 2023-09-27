@@ -5,9 +5,3 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-
-@media (max-width: 858px) {
-  a:focus + ul {
-    left: 0;
-  }
-}

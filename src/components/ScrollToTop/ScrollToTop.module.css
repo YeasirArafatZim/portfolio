@@ -8,6 +8,10 @@
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
+  opacity: 0.5;
+}
+.block:hover {
+  opacity: 0.8;
 }
 .block:hover .icon {
   color: white;
@@ -17,5 +21,8 @@
 }
 .icon {
   font-size: 25px;
-  color: rgb(83, 83, 83);
+  color: rgb(226, 226, 226);
+}
+.darkIcon {
+  color: black;
 }

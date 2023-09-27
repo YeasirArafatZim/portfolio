@@ -6,6 +6,10 @@ const ScrollToTop = ({ darkMode }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
+    // setIsVisible(true);
+    // setTimeout(() => {
+    //   setIsVisible(false);
+    // }, 3000);
     if (window.scrollY > 140) {
       setIsVisible(true);
     } else {
@@ -36,7 +40,9 @@ const ScrollToTop = ({ darkMode }) => {
         }}
         onClick={scrollToTop}
       >
-        <FaHandPointUp className={styles.icon} />
+        <FaHandPointUp
+          className={`${styles.icon} ${darkMode ? styles.darkIcon : ''}`}
+        />
       </div>
     </>
   );
