@@ -2,15 +2,29 @@ import GithubRepoCard from '../GithubRepoCard/GithubRepoCard';
 import ProjectsData from '@/data/projects.json';
 import styles from './Projects.module.css';
 
-export default function Projects() {
+export default function Projects({ darkMode }) {
   return (
     <>
       <div id="projects">
-        <h1 style={{ textAlign: 'center' }}>Projects</h1>
+        <h1 className={`${styles.heading} ${darkMode ? styles.darkHead : ''}`}>
+          Projects
+        </h1>
         <div className={styles.repoCards}>
           {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} key={repo.id} />;
+            return (
+              <GithubRepoCard repo={repo} key={repo.id} darkMode={darkMode} />
+            );
           })}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+          <button
+            onClick={() =>
+              window.open('https://github.com/YeasirArafatZim/', '_blank')
+            }
+            className={`btn ${styles.btn} ${darkMode ? styles.btnDark : ''}`}
+          >
+            See More
+          </button>
         </div>
       </div>
     </>

@@ -2,23 +2,36 @@ import { Icon } from '@iconify/react';
 import styles from './GithubRepoCard.module.css';
 // import { Fade } from "react-reveal";
 
-export default function GithubRepoCard({ repo }) {
+export default function GithubRepoCard({ repo, darkMode }) {
   function openRepoinNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
   }
 
   return (
-    <div className={styles.repoCardDiv} style={{ backgroundColor: '#A6E1FA' }}>
+    <div
+      className={styles.repoCardDiv}
+      style={{ backgroundColor: darkMode ? 'rgb(0, 86, 161)' : '#A6E1FA' }}
+    >
       {/* <Fade bottom duration={2000} distance="40px"> */}
       <div key={repo.id} onClick={() => openRepoinNewTab(repo.url)}>
         <div className={styles.repoNameDiv}>
-          <Icon icon="pajamas:project" className={styles.repoSvg} />
-          <p className={styles.repoName} style={{ color: '#001C55' }}>
+          <Icon
+            icon="pajamas:project"
+            className={styles.repoSvg}
+            style={{ color: darkMode ? 'white' : '' }}
+          />
+          <p
+            className={styles.repoName}
+            style={{ color: darkMode ? 'rgb(175, 215, 255)' : '#001C55' }}
+          >
             {repo.name}
           </p>
         </div>
-        <p className={styles.repoDescription} style={{ color: '#001C55' }}>
+        <p
+          className={styles.repoDescription}
+          style={{ color: darkMode ? 'rgb(175, 215, 255)' : '#001C55' }}
+        >
           {repo.description}
         </p>
         <div className={styles.repoDetails}>

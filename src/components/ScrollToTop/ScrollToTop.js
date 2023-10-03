@@ -6,10 +6,6 @@ const ScrollToTop = ({ darkMode }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    // setIsVisible(true);
-    // setTimeout(() => {
-    //   setIsVisible(false);
-    // }, 3000);
     if (window.scrollY > 140) {
       setIsVisible(true);
     } else {

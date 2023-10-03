@@ -25,7 +25,7 @@ export default function Home() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main style={darkMode ? darkStyle : tran}>
         <Top />
-        <Projects />
+        <Projects darkMode={darkMode} />
         <Contact darkMode={darkMode} />
 
         {/* <div style={{ height: '900px' }}>

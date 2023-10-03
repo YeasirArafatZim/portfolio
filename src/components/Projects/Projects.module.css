@@ -1,3 +1,12 @@
+.heading {
+  font-family: 'Poppins';
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  color: #222a41;
+}
 .repoCards {
   display: flex;
   flex-direction: row;
@@ -7,6 +16,26 @@
   margin-right: 40px;
   margin-top: 60px;
 }
+.btn {
+  font-size: 16px;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #ff4c0a;
+  color: white !important;
+}
+
+.btn:hover {
+  background-color: #ff4400 !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media (max-width: 1100px) {
+  .heading {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 768px) {
   .repoCards {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -14,4 +43,12 @@
     margin-right: 10px;
     margin-top: 30px;
   }
+}
+
+/* Dark Mode  */
+.darkHead {
+  color: white;
+}
+.btnDark:hover {
+  box-shadow: rgba(197, 197, 197, 0.349) 0px 3px 8px;
 }

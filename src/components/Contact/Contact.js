@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
 // import {Map, GoogleApiWrapper} from 'google-maps-react';
 
@@ -22,12 +23,27 @@ const Contact = ({ darkMode }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formContent);
 
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
     }, 5000);
+
+    emailjs
+      .send(
+        'service_5uh6lki',
+        'template_7wdttcv',
+        formContent,
+        'PFg0OZR1VPA1HUBV_'
+      )
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (err) => {
+          console.log('FAILED...', err);
+        }
+      );
 
     setFormContent({
       name: '',
