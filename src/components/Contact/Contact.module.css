@@ -52,18 +52,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: baseline;
   margin-top: 37px;
+}
+.successDiv {
+  background-color: #f7f7f7;
+  border: 1px solid #8a8a8a;
+  border-radius: 5px;
+  margin-right: 15px;
 }
 .successful {
   margin-bottom: 0px;
-  margin-right: 25px;
+  margin: 18px 25px;
   color: rgb(0, 221, 0);
 }
 
 @media screen and (max-width: 1200px) {
   .email {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .successful {
+    margin: 16px 10px;
   }
 }
 

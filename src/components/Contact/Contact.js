@@ -23,12 +23,6 @@ const Contact = ({ darkMode }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
-
     emailjs
       .send(
         'service_5uh6lki',
@@ -38,6 +32,10 @@ const Contact = ({ darkMode }) => {
       )
       .then(
         (response) => {
+          setSubmitted(true);
+          setTimeout(() => {
+            setSubmitted(false);
+          }, 4000);
           console.log('SUCCESS!', response.status, response.text);
         },
         (err) => {
@@ -153,13 +151,11 @@ const Contact = ({ darkMode }) => {
                 required
               />
               <div className={styles.submitDiv}>
-                <div>
-                  <h6
-                    className={styles.successful}
-                    style={{ display: submitted ? 'block' : 'none' }}
-                  >
-                    Successfully Sent
-                  </h6>
+                <div
+                  className={styles.successDiv}
+                  style={{ display: submitted ? 'block' : 'none' }}
+                >
+                  <p className={styles.successful}>Successfully Sent</p>
                 </div>
                 <div>
                   <button
