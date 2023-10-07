@@ -2,6 +2,7 @@
 import Navbar from '@/components/Navbar/Navbar';
 import Top from '@/components/Top/Top';
 import Projects from '@/components/Projects/Projects';
+import Educations from '@/components/Educations/Educations';
 import Contact from '@/components/Contact';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useState } from 'react';
@@ -26,6 +27,7 @@ export default function Home() {
       <main style={darkMode ? darkStyle : tran}>
         <Top />
         <Projects darkMode={darkMode} />
+        <Educations darkMode={darkMode} />
         <Contact darkMode={darkMode} />
 
         {/* <div style={{ height: '900px' }}>

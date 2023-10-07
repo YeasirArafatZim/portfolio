@@ -1,0 +1,159 @@
+.degreeCard {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardTitle {
+  font-family: 'Poppins';
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.cardSubtitle {
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+.cardImg {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid #d9dbdf;
+  text-align: center;
+}
+
+.bodyHeader {
+  max-width: inherit;
+  display: flex;
+  border-radius: 7px 7px 0px 0px;
+  padding: 20px;
+}
+
+.bodyHeaderTitle {
+  align-items: flex-start;
+  width: 80%;
+}
+
+.bodyHeaderDuration {
+  width: 20%;
+}
+.duration {
+  font-family: 'Poppins';
+  font-size: 16px;
+  padding-right: 10px;
+  float: right;
+}
+
+.bodyContent {
+  max-width: inherit;
+  border-radius: 0px 0px 7px 7px;
+  padding: 10px;
+  padding-top: 20px;
+  background-color: #e6faf5;
+}
+
+.contentList {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Poppins';
+}
+
+.cardBody {
+  border-bottom: 1px solid #d9dbdf;
+  border-left: 1px solid #d9dbdf;
+  border-right: 1px solid #d9dbdf;
+  border-radius: 7px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #d9dbdf;
+}
+
+.visitBtn {
+  font-family: 'Poppins';
+  margin: 10px 10px 30px 0px;
+  padding: 10px;
+  border-radius: 7px;
+  border: 0px;
+  background-color: #7eded9;
+  color: #084c61;
+}
+
+.visitBtn:hover {
+  color: #0b4557;
+  background-color: #62c0bb !important;
+}
+.visitBtnDark {
+  background-color: #0056a1;
+  color: white;
+}
+.visitBtnDark:hover {
+  background-color: #004f94 !important;
+  color: white;
+}
+
+.btn {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins';
+}
+@media (max-width: 1200px) {
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardSubtitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .duration {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .degreeCard {
+    flex-direction: column;
+  }
+
+  .bodyHeader {
+    flex-direction: column;
+  }
+
+  .bodyHeaderTitle {
+    width: 100%;
+  }
+
+  .bodyHeaderDuration {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .duration {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+  }
+
+  .cardImg {
+    width: 200px;
+  }
+
+  .cardBody {
+    width: 100% !important;
+  }
+
+  .cardSubtitle {
+    font-weight: 400;
+  }
+  .contentList {
+    font-size: 15px;
+  }
+}

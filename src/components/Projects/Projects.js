@@ -5,7 +5,7 @@ import styles from './Projects.module.css';
 export default function Projects({ darkMode }) {
   return (
     <>
-      <div id="projects">
+      <div id="projects" className="container">
         <h1 className={`${styles.heading} ${darkMode ? styles.darkHead : ''}`}>
           Projects
         </h1>

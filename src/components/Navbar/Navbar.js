@@ -185,6 +185,15 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           </li>
           <li>
             <Link
+              href={'#educations'}
+              onClick={uncheckedSideMenu}
+              className={`${darkMode ? styles.linkDark : ''}`}
+            >
+              Educations
+            </Link>
+          </li>
+          <li>
+            <Link
               href={'#contact'}
               onClick={uncheckedSideMenu}
               className={`${darkMode ? styles.linkDark : ''}`}
