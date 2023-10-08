@@ -6,6 +6,7 @@ import Educations from '@/components/Educations/Educations';
 import Contact from '@/components/Contact';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useState } from 'react';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,6 +30,7 @@ export default function Home() {
         <Projects darkMode={darkMode} />
         <Educations darkMode={darkMode} />
         <Contact darkMode={darkMode} />
+        <Footer darkMode={darkMode} />
 
         {/* <div style={{ height: '900px' }}>
           <iframe

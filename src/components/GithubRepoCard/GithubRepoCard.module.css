@@ -33,10 +33,11 @@
 }
 
 .repoDescription {
+  font-size: 16px;
   overflow: hidden;
   text-align: left;
   display: -webkit-box;
-  font-family: 'Google Sans Regular';
+  font-family: 'Poppins';
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   margin-top: 0.8rem;
@@ -44,7 +45,7 @@
 
 .repoDetails {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .repoCreationDate {
@@ -75,27 +76,24 @@
   font-family: 'Google Sans Regular';
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .repoCardDiv {
     flex: 1 1 40%;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .repoCardDiv {
     flex: 1 1 100%;
   }
+}
 
+@media (max-width: 768px) {
   .repoName {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .repoDescription {
     font-size: 14px;
-  }
-
-  .repoDetails {
-    flex-direction: column;
   }
 
   .repoCreationDate {

@@ -6,23 +6,31 @@ const DegreeCard = ({ degree, darkMode }) => {
   return (
     <div className={styles.degreeCard}>
       {degree.logo_path && (
-        <div
-          className={styles.cardImg}
-          style={{
-            boxShadow: darkMode ? '5px 5px 5px #393b41' : '5px 5px 5px #d9dbdf',
-            border: darkMode ? '1px solid #2f2f30' : '1px solid #d9dbdf',
-          }}
+        <Link
+          href={degree.website_link}
+          target="_blank"
+          style={{ borderRadius: '50%' }}
         >
-          <Image
-            src={`./img/${degree.logo_path}`}
-            alt={degree.alt_name}
-            width={100}
-            height={150}
+          <div
+            className={styles.cardImg}
             style={{
-              transform: 'scale(0.9)',
+              boxShadow: darkMode
+                ? '5px 5px 5px #393b41'
+                : '5px 5px 5px #d9dbdf',
+              border: darkMode ? '1px solid #2f2f30' : '1px solid #d9dbdf',
             }}
-          />
-        </div>
+          >
+            <Image
+              src={`./img/${degree.logo_path}`}
+              alt={degree.alt_name}
+              width={110}
+              height={150}
+              style={{
+                transform: 'scale(0.9)',
+              }}
+            />
+          </div>
+        </Link>
       )}
 
       <div
@@ -77,11 +85,7 @@ const DegreeCard = ({ degree, darkMode }) => {
           })}
           {degree.website_link && (
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <Link
-                href={degree.website_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={degree.website_link} target="_blank" passHref>
                 <button
                   className={`btn custom_btn ${styles.visitBtn} ${
                     darkMode ? styles.visitBtnDark : ''
