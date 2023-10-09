@@ -16,14 +16,14 @@ export default function Projects({ darkMode }) {
             );
           })}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <button
             onClick={() =>
               window.open('https://github.com/YeasirArafatZim/', '_blank')
             }
             className={`btn ${styles.btn} ${darkMode ? styles.btnDark : ''}`}
           >
-            See More
+            More Projects
           </button>
         </div>
       </div>

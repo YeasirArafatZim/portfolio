@@ -3,6 +3,7 @@ import styles from './Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 // FontAwesome Icons
 import { FaBars, FaGitSquare } from 'react-icons/fa';
 import { BsPersonVcardFill } from 'react-icons/bs';
@@ -31,17 +32,27 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </label>
 
         {/* <!-- Offcanvas Section --> */}
-        <button
-          className={`navbar-toggler ${styles.navIcon} ${
-            darkMode ? styles.navIconDark : ''
-          } ${styles.address}`}
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
+        <OverlayTrigger
+          placement={'bottom'}
+          overlay={
+            <Tooltip id={`tooltip-top`}>
+              <strong>{'Info'}</strong>
+            </Tooltip>
+          }
         >
-          <BsPersonVcardFill />
-        </button>
+          <button
+            className={`navbar-toggler ${styles.navIcon} ${
+              darkMode ? styles.navIconDark : ''
+            } ${styles.address}`}
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <BsPersonVcardFill />
+          </button>
+        </OverlayTrigger>
+
         <div
           className={'offcanvas offcanvas-end'}
           id="offcanvasNavbar"
@@ -147,16 +158,24 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </div>
 
         {/* <!-- Dark Mode Section  --> */}
-
         <input
           type="checkbox"
           id="dark-mode"
           className={styles.darkBtn}
           onClick={toggleDarkMode}
         />
-        <label className={styles.darkMode}>
-          <ToggleSwitch darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        </label>
+        <OverlayTrigger
+          placement={'bottom'}
+          overlay={
+            <Tooltip id={`tooltip-top`}>
+              <strong>{darkMode ? 'Light Mode' : 'Dark Mode'}</strong>
+            </Tooltip>
+          }
+        >
+          <label className={styles.darkMode}>
+            <ToggleSwitch darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          </label>
+        </OverlayTrigger>
 
         {/* <!-- Logo Section  --> */}
 

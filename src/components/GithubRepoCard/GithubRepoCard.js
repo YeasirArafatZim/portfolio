@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import styles from './GithubRepoCard.module.css';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 // import { Fade } from "react-reveal";
 
 export default function GithubRepoCard({ repo, darkMode }) {
@@ -43,11 +44,20 @@ export default function GithubRepoCard({ repo, darkMode }) {
             <ul className={styles.devIconsLanguages}>
               {repo.languages.map((logo, idx) => {
                 return (
-                  <Icon
+                  <OverlayTrigger
                     key={idx}
-                    icon={logo.iconifyClass}
-                    className={styles.inlineLanguages}
-                  />
+                    placement={'top'}
+                    overlay={
+                      <Tooltip id={`tooltip-top`}>
+                        <strong>{logo.name}</strong>
+                      </Tooltip>
+                    }
+                  >
+                    <Icon
+                      icon={logo.iconifyClass}
+                      className={styles.inlineLanguages}
+                    />
+                  </OverlayTrigger>
                 );
               })}
             </ul>
