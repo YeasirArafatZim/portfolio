@@ -7,6 +7,7 @@ import Contact from '@/components/Contact';
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import { useState } from 'react';
 import Footer from '@/components/Footer/Footer';
+import Skills from '@/components/Skills/Skills';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,6 +28,7 @@ export default function Home() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main style={darkMode ? darkStyle : tran}>
         <Top />
+        <Skills darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Educations darkMode={darkMode} />
         <Contact darkMode={darkMode} />

@@ -1,0 +1,108 @@
+.mainDiv {
+  display: flex;
+  overflow: hidden;
+}
+
+.skillsHeader {
+  font-family: 'Poppins';
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 90px;
+  margin-bottom: 50px;
+  color: #222a41;
+}
+
+.skillsText {
+  font-size: 18px;
+}
+
+.textDiv {
+  margin-left: 50px;
+  font-family: 'Poppins';
+}
+
+.mainDiv > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.imageDiv > * {
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Poppins';
+  line-height: normal;
+}
+
+.devIcons {
+  padding-left: 0px;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.softwareSkillInline {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: 'Poppins';
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .heading {
+    font-size: 40px;
+  }
+  .skillsHeader {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1100px) {
+  .skillsHeader {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .skillsHeader {
+    font-size: 35px;
+  }
+  .mainDiv {
+    flex-direction: column;
+  }
+  .textDiv {
+    margin-left: 0px;
+    margin: 20px;
+  }
+  .skillsText {
+    font-size: 16px;
+  }
+  .imageDiv {
+    order: 2;
+  }
+  .imageDiv > * {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .skillsHeader {
+    padding-top: 60px;
+  }
+}
