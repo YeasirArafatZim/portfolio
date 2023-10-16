@@ -5,14 +5,19 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 export default function GithubRepoCard({ repo, darkMode }) {
   function openRepoinNewTab(url) {
-    var win = window.open(url, '_blank');
-    win.focus();
+    if (url) {
+      var win = window.open(url, '_blank');
+      win.focus();
+    }
   }
 
   return (
     <div
       className={styles.repoCardDiv}
-      style={{ backgroundColor: darkMode ? 'rgb(0, 86, 161)' : '#A6E1FA' }}
+      style={{
+        backgroundColor: darkMode ? 'rgb(0, 86, 161)' : '#A6E1FA',
+        cursor: repo.url ? 'pointer' : 'default',
+      }}
     >
       {/* <Fade bottom duration={2000} distance="40px"> */}
       <div key={repo.id} onClick={() => openRepoinNewTab(repo.url)}>
@@ -35,11 +40,12 @@ export default function GithubRepoCard({ repo, darkMode }) {
         >
           {repo.description}
         </p>
-        <div className={styles.repoDetails}>
-          <p className={styles.repoCreationDate} style={{ color: '#8396B2' }}>
-            Created on {repo.createdAt}
-          </p>
-          {/* Languages Logo Section */}
+
+        <p className={styles.repoCreationDate} style={{ color: '#8396B2' }}>
+          Created on {repo.createdAt}
+        </p>
+        {/* Languages Logo Section */}
+        <div className={styles.lanDiv}>
           <div className={styles.repoLanguages}>
             <ul className={styles.devIconsLanguages}>
               {repo.languages.map((logo, idx) => {
@@ -61,6 +67,15 @@ export default function GithubRepoCard({ repo, darkMode }) {
                 );
               })}
             </ul>
+          </div>
+
+          <div>
+            <button
+              className={`btn ${styles.btn}`}
+              onClick={() => openRepoinNewTab(repo.live)}
+            >
+              {repo.live ? 'live preview' : 'screenshots'}
+            </button>
           </div>
         </div>
       </div>

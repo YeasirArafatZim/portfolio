@@ -49,27 +49,27 @@ export default function SkillSection({ darkMode }) {
                 <ul className={styles.devIcons}>
                   {skill.softwareSkills.map((logo) => {
                     return (
-                      <OverlayTrigger
+                      <li
+                        className={styles.softwareSkillInline}
+                        name={logo.skillName}
                         key={logo.skillName}
-                        placement={'top'}
-                        overlay={
-                          <Tooltip id={`tooltip-top`}>
-                            <strong>{logo.skillName}</strong>
-                          </Tooltip>
-                        }
                       >
-                        <li
-                          className={styles.softwareSkillInline}
-                          name={logo.skillName}
-                        >
-                          {logo.iconifyClassname && (
+                        {logo.iconifyClassname && (
+                          <OverlayTrigger
+                            placement={'top'}
+                            overlay={
+                              <Tooltip id={`tooltip-top`}>
+                                <strong>{logo.skillName}</strong>
+                              </Tooltip>
+                            }
+                          >
                             <Icon
                               icon={logo.iconifyClassname}
                               style={logo.style}
                             />
-                          )}
-                        </li>
-                      </OverlayTrigger>
+                          </OverlayTrigger>
+                        )}
+                      </li>
                     );
                   })}
                 </ul>

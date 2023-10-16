@@ -2,63 +2,75 @@
   "data": [
     {
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
-      "name": "masterPortfolio",
-      "createdAt": "2020-03-06",
-      "url": "https://github.com/ashutosh1919/masterPortfolio",
-      "description": "🔥 The Complete Customizable Software Developer Portfolio Template which lets you showcase your work and provides each and every detail about you as Software Developer.",
+      "name": "Miritus-company-website",
+      "createdAt": "17-01-2022",
+      "url": "https://github.com/mirrahat/miritus",
+      "live": "https://miritus.vercel.app/",
+      "description": "🔥 The Complete Responsive Software Company Website build with ReactJs",
       "isFork": false,
       "languages": [
         {
+          "name": "React",
+          "iconifyClass": "skill-icons:react-dark"
+        },
+        {
           "name": "HTML",
-          "iconifyClass": "logos-html-5"
+          "iconifyClass": "vscode-icons:file-type-html"
         },
         {
           "name": "CSS",
-          "iconifyClass": "logos-css-3"
+          "iconifyClass": "vscode-icons:file-type-css"
         },
         {
           "name": "JavaScript",
           "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "Dockerfile",
-          "iconifyClass": "devicon:docker-wordmark"
         }
       ]
     },
     {
       "id": "R_kgDOG_vYHA",
-      "name": "explainable-cnn",
-      "createdAt": "2022-03-13",
-      "url": "https://github.com/ashutosh1919/explainable-cnn",
-      "description": "📦 PyTorch based visualization package for generating layer-wise explanations for CNNs.",
+      "name": "Admin-panel-of-course-selling-website",
+      "createdAt": "15-10-2022",
+      "description": "📦 This is a Course Selling Website's admin panel fully responsive design",
       "isFork": false,
       "languages": [
         {
-          "name": "Python",
-          "iconifyClass": "logos-python"
+          "name": "NextJs",
+          "iconifyClass": "logos:nextjs-icon"
+        },
+        {
+          "name": "NodeJs",
+          "iconifyClass": "logos:nodejs"
+        },
+        {
+          "name": "MongoDB",
+          "iconifyClass": "devicon:mongodb-wordmark"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
         }
       ]
     },
     {
       "id": "R_kgDOG0_8uQ",
-      "name": "react-awesome-shapes",
-      "createdAt": "2022-02-11",
-      "url": "https://github.com/ashutosh1919/react-awesome-shapes",
-      "description": "🌀 Insert Awesome Shapes into Your React Site with Ease.",
+      "name": "Profiler website",
+      "createdAt": "23-04-2022",
+      "live": "https://deploy-preview-14--profiler-web.netlify.app/",
+      "description": "🌀 Personal Client's website designed based on his requirement.",
       "isFork": false,
       "languages": [
         {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
+          "name": "NextJs",
+          "iconifyClass": "logos:nextjs-icon"
         },
         {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
+          "name": "NodeJs",
+          "iconifyClass": "logos:nodejs"
         },
         {
-          "name": "Shell",
-          "iconifyClass": "simple-icons:shell"
+          "name": "MongoDB",
+          "iconifyClass": "devicon:mongodb-wordmark"
         },
         {
           "name": "JavaScript",
@@ -68,47 +80,65 @@
     },
     {
       "id": "R_kgDOGcPKSQ",
-      "name": "neuro-symbolic-sudoku-solver",
+      "name": "Business-management-system",
       "createdAt": "2021-11-26",
-      "url": "https://github.com/ashutosh1919/neuro-symbolic-sudoku-solver",
-      "description": "⚙️ Solving sudoku using Deep Reinforcement learning in combination with powerful symbolic representations.",
+      "url": "https://github.com/YeasirArafatZim/Business-management",
+      "description": "⚙️ Personal Client Project. It can manage Stocks, Sells, Profit, Due, Customers, Sellers and also can send a message to a client if they make some purchase",
       "isFork": false,
       "languages": [
         {
-          "name": "Python",
-          "iconifyClass": "logos-python"
-        }
-      ]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkzMjcyMjI5Njk=",
-      "name": "react-awesome-loaders",
-      "createdAt": "2021-01-06",
-      "url": "https://github.com/ashutosh1919/react-awesome-loaders",
-      "description": "🚀  High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
-      "isFork": false,
-      "languages": [
+          "name": "HTML",
+          "iconifyClass": "vscode-icons:file-type-html"
+        },
         {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        }
-      ]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkzMjU5NDM1MTE=",
-      "name": "react-liquidswipe",
-      "createdAt": "2021-01-01",
-      "url": "https://github.com/ashutosh1919/react-liquidswipe",
-      "description": "🚀 Smooth Liquid Swipe Animation to transition between different components.",
-      "isFork": false,
-      "languages": [
+          "name": "CSS",
+          "iconifyClass": "vscode-icons:file-type-css"
+        },
         {
           "name": "JavaScript",
           "iconifyClass": "logos-javascript"
         },
         {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
+          "name" : "PHP",
+          "iconifyClass": "logos:php"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkzMjcyMjI5Njk=",
+      "name": "Disease-Prediction-Based-on-their-Symptoms",
+      "createdAt": "2-07-2022",
+      "url": "https://github.com/YeasirArafatZim/Disease-Prediction-Based-on-their-Symptoms-using-Neural-Network",
+      "live": "https://github.com/YeasirArafatZim/Disease-Prediction-Based-on-their-Symptoms-using-Neural-Network/blob/master/Disease_Prediction.ipynb",
+      "description": "🚀  I designed a Neural Network using Pytorch to train our Disease Prediction Model, and it can predict Disease based on Patients Symptoms.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "skill-icons:python-dark"
+        },
+        {
+          "name": "Pytorch",
+          "iconifyClass": "logos:pytorch"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkzMjU5NDM1MTE=",
+      "name": "Bangla-Handwritten-Digit-Classification-using-Neural-Network",
+      "createdAt": "24-07-2021",
+      "url": "https://github.com/YeasirArafatZim/Bangla-Handwritten-Digit-Classification-using-Neural-Network",
+      "live": "https://github.com/YeasirArafatZim/Bangla-Handwritten-Digit-Classification-using-Neural-Network/blob/master/Bangla%20Handwritten%20Digit%20Classification.ipynb",
+      "description": "🚀 I designed a Deep Neural Network using Pytorch to train our Dataset for Bangla Handwritten Digit Classification",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "skill-icons:python-dark"
+        },
+        {
+          "name": "Pytorch",
+          "iconifyClass": "logos:pytorch"
         }
       ]
     }

@@ -2,7 +2,6 @@
   color: rgb(88, 96, 105);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
   padding: 2rem;
-  cursor: pointer;
   flex: 1 1 25%;
 }
 .repoCardDiv:hover {
@@ -43,22 +42,21 @@
   margin-top: 0.8rem;
 }
 
-.repoDetails {
+.lanDiv {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  /* flex-direction: column; */
 }
 
 .repoCreationDate {
-  margin: 0;
-  font-family: 'Google Sans Regular';
-  font-weight: 400;
+  font-family: 'Poppins';
   margin-left: 0px;
   margin-right: auto;
 }
 
 .repoLanguages {
-  margin-left: auto;
-  margin-right: 0px;
+  margin-left: 0px;
+  margin-right: auto;
 }
 .devIconsLanguages {
   padding-left: 0;
@@ -66,7 +64,9 @@
   font-size: 2rem;
   margin-bottom: 0px;
   margin-top: 0px;
-  text-align: right;
+  /* text-align: right; */
+  display: flex;
+  align-items: center;
 }
 
 .inlineLanguages {
@@ -75,6 +75,14 @@
   margin-left: 10px;
   margin-bottom: 0px;
   font-family: 'Google Sans Regular';
+}
+.btn {
+  background-color: rgb(78, 78, 78);
+  color: white;
+}
+.btn:hover {
+  background-color: rgb(61, 60, 60);
+  color: white;
 }
 
 @media (max-width: 1400px) {
@@ -103,5 +111,13 @@
   .inlineLanguages {
     margin-right: 10px;
     margin-bottom: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .lanDiv {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 20px;
   }
 }

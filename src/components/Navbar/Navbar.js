@@ -3,7 +3,6 @@ import styles from './Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 // FontAwesome Icons
 import { FaBars, FaGitSquare } from 'react-icons/fa';
 import { BsPersonVcardFill } from 'react-icons/bs';
@@ -32,26 +31,18 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         </label>
 
         {/* <!-- Offcanvas Section --> */}
-        <OverlayTrigger
-          placement={'bottom'}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{'Info'}</strong>
-            </Tooltip>
-          }
+
+        <button
+          className={`navbar-toggler ${styles.navIcon} ${
+            darkMode ? styles.navIconDark : ''
+          } ${styles.address}`}
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
         >
-          <button
-            className={`navbar-toggler ${styles.navIcon} ${
-              darkMode ? styles.navIconDark : ''
-            } ${styles.address}`}
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <BsPersonVcardFill />
-          </button>
-        </OverlayTrigger>
+          <BsPersonVcardFill />
+        </button>
 
         <div
           className={'offcanvas offcanvas-end'}
@@ -164,18 +155,9 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           className={styles.darkBtn}
           onClick={toggleDarkMode}
         />
-        <OverlayTrigger
-          placement={'bottom'}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{darkMode ? 'Light Mode' : 'Dark Mode'}</strong>
-            </Tooltip>
-          }
-        >
-          <label className={styles.darkMode}>
-            <ToggleSwitch darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          </label>
-        </OverlayTrigger>
+        <label className={styles.darkMode}>
+          <ToggleSwitch darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        </label>
 
         {/* <!-- Logo Section  --> */}
 
