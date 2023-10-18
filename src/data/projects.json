@@ -7,7 +7,6 @@
       "url": "https://github.com/mirrahat/miritus",
       "live": "https://miritus.vercel.app/",
       "description": "🔥 The Complete Responsive Software Company Website build with ReactJs",
-      "isFork": false,
       "languages": [
         {
           "name": "React",
@@ -32,7 +31,34 @@
       "name": "Admin-panel-of-course-selling-website",
       "createdAt": "15-10-2022",
       "description": "📦 This is a Course Selling Website's admin panel fully responsive design",
-      "isFork": false,
+      "imgFolder": "admin_panel",
+      "screenshots" : [
+        {
+          "name": "Login page",
+          "location": "1.png"
+        },
+        {
+          "name": "Dashboard",
+          "location": "2.png"
+        },
+        {
+          "name": "Purchase page",
+          "location": "3.png"
+        },
+        {
+          "name": "Sell page",
+          "location": "4.png"
+        },
+        {
+          "name": "Profit Selection Page",
+          "location": "5.png"
+        },
+        {
+          "name": "Profit page",
+          "location": "6.png"
+        }
+      ],
+  
       "languages": [
         {
           "name": "NextJs",
@@ -58,7 +84,6 @@
       "createdAt": "23-04-2022",
       "live": "https://deploy-preview-14--profiler-web.netlify.app/",
       "description": "🌀 Personal Client's website designed based on his requirement.",
-      "isFork": false,
       "languages": [
         {
           "name": "NextJs",
@@ -82,9 +107,34 @@
       "id": "R_kgDOGcPKSQ",
       "name": "Business-management-system",
       "createdAt": "2021-11-26",
-      "url": "https://github.com/YeasirArafatZim/Business-management",
       "description": "⚙️ Personal Client Project. It can manage Stocks, Sells, Profit, Due, Customers, Sellers and also can send a message to a client if they make some purchase",
-      "isFork": false,
+      "imgFolder": "admin_panel",
+      "screenshots" : [
+        {
+          "name": "Login page",
+          "location": "1.png"
+        },
+        {
+          "name": "Dashboard",
+          "location": "2.png"
+        },
+        {
+          "name": "Purchase page",
+          "location": "3.png"
+        },
+        {
+          "name": "Sell page",
+          "location": "4.png"
+        },
+        {
+          "name": "Profit Selection Page",
+          "location": "5.png"
+        },
+        {
+          "name": "Profit page",
+          "location": "6.png"
+        }
+      ],
       "languages": [
         {
           "name": "HTML",
@@ -111,7 +161,6 @@
       "url": "https://github.com/YeasirArafatZim/Disease-Prediction-Based-on-their-Symptoms-using-Neural-Network",
       "live": "https://github.com/YeasirArafatZim/Disease-Prediction-Based-on-their-Symptoms-using-Neural-Network/blob/master/Disease_Prediction.ipynb",
       "description": "🚀  I designed a Neural Network using Pytorch to train our Disease Prediction Model, and it can predict Disease based on Patients Symptoms.",
-      "isFork": false,
       "languages": [
         {
           "name": "Python",
@@ -130,7 +179,6 @@
       "url": "https://github.com/YeasirArafatZim/Bangla-Handwritten-Digit-Classification-using-Neural-Network",
       "live": "https://github.com/YeasirArafatZim/Bangla-Handwritten-Digit-Classification-using-Neural-Network/blob/master/Bangla%20Handwritten%20Digit%20Classification.ipynb",
       "description": "🚀 I designed a Deep Neural Network using Pytorch to train our Dataset for Bangla Handwritten Digit Classification",
-      "isFork": false,
       "languages": [
         {
           "name": "Python",

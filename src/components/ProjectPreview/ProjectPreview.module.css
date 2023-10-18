@@ -1,0 +1,35 @@
+.contentClass {
+  background-color: #212529;
+  color: #adb5bd;
+}
+.imgDiv {
+  cursor: pointer;
+  text-align: center;
+  user-select: none !important;
+}
+.img {
+  width: 700px;
+  height: auto;
+}
+.heading {
+  font-size: 35px;
+  margin-top: 40px;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  .img {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .img {
+    width: 400px;
+  }
+}
+@media (max-width: 430px) {
+  .img {
+    width: 300px;
+  }
+}

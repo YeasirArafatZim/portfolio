@@ -1,13 +1,14 @@
 import { Icon } from '@iconify/react';
 import styles from './GithubRepoCard.module.css';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
-// import { Fade } from "react-reveal";
+import ProjectPreview from '../ProjectPreview/ProjectPreview';
+import { useState } from 'react';
 
 export default function GithubRepoCard({ repo, darkMode }) {
+  const [showModal, setShowModal] = useState(false);
   function openRepoinNewTab(url) {
     if (url) {
-      var win = window.open(url, '_blank');
-      win.focus();
+      window.open(url, '_blank');
     }
   }
 
@@ -53,6 +54,7 @@ export default function GithubRepoCard({ repo, darkMode }) {
                   <OverlayTrigger
                     key={idx}
                     placement={'top'}
+                    delay={{ show: 250, hide: 400 }}
                     overlay={
                       <Tooltip id={`tooltip-top`}>
                         <strong>{logo.name}</strong>
@@ -70,12 +72,29 @@ export default function GithubRepoCard({ repo, darkMode }) {
           </div>
 
           <div>
-            <button
-              className={`btn ${styles.btn}`}
-              onClick={() => openRepoinNewTab(repo.live)}
-            >
-              {repo.live ? 'live preview' : 'screenshots'}
-            </button>
+            {repo.live ? (
+              <button
+                className={`btn ${styles.btn}`}
+                onClick={() => openRepoinNewTab(repo.live)}
+              >
+                live preview
+              </button>
+            ) : (
+              <>
+                <button
+                  className={`btn ${styles.btn}`}
+                  onClick={() => setShowModal(true)}
+                >
+                  screenshots
+                </button>
+                <ProjectPreview
+                  show={showModal}
+                  onHide={() => setShowModal(false)}
+                  data={repo}
+                  darkMode={darkMode}
+                />
+              </>
+            )}
           </div>
         </div>
       </div>
