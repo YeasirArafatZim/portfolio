@@ -88,7 +88,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             <div className={'container px-5 pt-4'}>
               <div className={'row'}>
                 <div
-                  className={`col ${styles.pLinkML}`}
+                  className="col"
                   style={{ padding: '0px', textAlign: 'center' }}
                 >
                   <button
@@ -144,6 +144,17 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                   </button>
                 </div>
               </div>
+            </div>
+
+            <div className={styles.btnDiv}>
+              <button
+                onClick={() => window.open('./resume.pdf', '_blank')}
+                className={`btn ${styles.btn} ${
+                  darkMode ? styles.btnDark : ''
+                }`}
+              >
+                My Resume
+              </button>
             </div>
           </div>
         </div>

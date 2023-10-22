@@ -1,7 +1,10 @@
-import Link from 'next/link';
 import styles from './Top.module.css';
 
 const Top = () => {
+  const openPDF = () => {
+    const pdfUrl = './resume.pdf';
+    window.open(pdfUrl, '_blank');
+  };
   return (
     <>
       <div className={styles.imgbox}>
@@ -19,9 +22,11 @@ const Top = () => {
             profound understanding of web applications. I thrive on transforming
             creative ideas into functional, user-friendly web applications.
           </p>
-          <Link href={'#contact'}>
-            <button className={`btn ${styles.btn}`}>CONTACT ME</button>
-          </Link>
+          {/* <Link href={'#contact'}> */}
+          <button className={`btn ${styles.btn}`} onClick={openPDF}>
+            MY RESUME
+          </button>
+          {/* </Link> */}
         </div>
       </div>
     </>

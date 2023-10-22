@@ -18,18 +18,32 @@
   color: #222222;
   margin-bottom: 50px;
 }
+.modalHeader {
+  font-family: 'Poppins';
+  font-size: 27px;
+  margin-left: 30px;
+}
 @media (max-width: 992px) {
   .img {
     width: 500px;
+  }
+  .modalHeader {
+    font-size: 25px;
   }
 }
 @media (max-width: 550px) {
   .img {
     width: 400px;
   }
+  .modalHeader {
+    font-size: 20px;
+  }
 }
 @media (max-width: 430px) {
   .img {
     width: 300px;
+  }
+  .modalHeader {
+    margin-left: 0px;
   }
 }

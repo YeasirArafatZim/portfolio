@@ -5,8 +5,10 @@ import './style.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function ProjectPreview({ show, onHide, data, darkMode }) {
+  const [header, setHeader] = useState(data.screenshots[0].name);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -35,8 +37,11 @@ export default function ProjectPreview({ show, onHide, data, darkMode }) {
         contentClassName={darkMode ? styles.contentClass : ''}
       >
         <Modal.Header closeButton onHide={onHide}>
-          <Modal.Title id="contained-modal-title-vcenter">
-            {data.name}
+          <Modal.Title
+            id="contained-modal-title-vcenter"
+            className={styles.modalHeader}
+          >
+            {header}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -57,6 +62,13 @@ export default function ProjectPreview({ show, onHide, data, darkMode }) {
             dotListClass="custom-dot-list-style"
             partialVisbile={false}
             itemClass="carousel-item-padding-40-px"
+            afterChange={(previousSlide, { currentSlide, onMove }) => {
+              try {
+                setHeader(data.screenshots[currentSlide - 2].name);
+              } catch (error) {
+                setHeader(data.screenshots[0].name);
+              }
+            }}
           >
             {data.screenshots?.map((img, idx) => (
               <div key={idx} className={styles.imgDiv}>

@@ -73,7 +73,7 @@
 }
 
 .link_icon:hover {
-  font-size: 40px !important;
+  transform: scale(1.2);
 }
 .logo a {
   color: #c0c7ce;
@@ -109,6 +109,25 @@
   text-align: center;
   font-size: 18px;
   padding-top: 50px;
+}
+.btnDiv {
+  margin-top: 20px;
+  text-align: center;
+}
+.btn {
+  background-color: #222222;
+  color: white;
+  padding: 10px 20px;
+}
+.btn:hover {
+  background-color: #181818;
+  color: white;
+}
+.btnDark {
+  background-color: #4d4d4d;
+}
+.btnDark:hover {
+  background-color: #5c5b5b;
 }
 
 @media (max-width: 1000px) {
