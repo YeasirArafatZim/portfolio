@@ -33,13 +33,16 @@ export default function ProjectPreview({ show, onHide, data, darkMode }) {
         show={show}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
+        backdrop="static"
         centered
         contentClassName={darkMode ? styles.contentClass : ''}
       >
         <Modal.Header closeButton onHide={onHide}>
           <Modal.Title
             id="contained-modal-title-vcenter"
-            className={styles.modalHeader}
+            className={`${styles.modalHeader} ${
+              darkMode ? styles.modalHeaderDark : ''
+            }`}
           >
             {header}
           </Modal.Title>

@@ -59,7 +59,7 @@ const Contact = ({ darkMode }) => {
       >
         <p
           className={`${styles.email} ${darkMode ? styles.emailDark : ''}`}
-          data-aos="fade-up"
+          data-aos="zoom-out"
         >
           You can email me
         </p>

@@ -1,5 +1,5 @@
 .contentClass {
-  background-color: #212529;
+  background-color: #a0a0a0;
   color: #adb5bd;
 }
 .imgDiv {
@@ -22,6 +22,9 @@
   font-family: 'Poppins';
   font-size: 27px;
   margin-left: 30px;
+}
+.modalHeaderDark {
+  color: #222222;
 }
 @media (max-width: 992px) {
   .img {

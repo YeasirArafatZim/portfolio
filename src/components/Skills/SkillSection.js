@@ -31,13 +31,24 @@ export default function SkillSection({ darkMode }) {
   return (
     <div>
       {skills.data.map((skill, idx) => {
+        let reminder = 0;
+        if (idx % 2 == 1) {
+          reminder = 1;
+        }
         return (
           <div className={styles.mainDiv} key={idx}>
-            <div className={styles.imageDiv}>
+            <div
+              className={styles.imageDiv}
+              style={{ order: reminder ? 2 : '' }}
+              data-aos={`${reminder ? 'fade-left' : 'fade-right'}`}
+            >
               <GetSkillSvg fileName={skill.fileName} />
             </div>
 
-            <div className={styles.textDiv}>
+            <div
+              className={styles.textDiv}
+              data-aos={`${reminder ? 'fade-right' : 'fade-left'}`}
+            >
               <h1
                 className={styles.heading}
                 style={{ color: darkMode ? 'white' : 'black' }}

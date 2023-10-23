@@ -5,14 +5,22 @@ import styles from './Projects.module.css';
 export default function Projects({ darkMode }) {
   return (
     <>
-      <div id="projects" className="container">
-        <h1 className={`${styles.heading} ${darkMode ? styles.darkHead : ''}`}>
+      <div id="projects" className="container" style={{ overflow: 'hidden' }}>
+        <h1
+          className={`${styles.heading} ${darkMode ? styles.darkHead : ''}`}
+          data-aos="zoom-out"
+        >
           Projects
         </h1>
         <div className={styles.repoCards}>
-          {ProjectsData.data.map((repo) => {
+          {ProjectsData.data.map((repo, idx) => {
             return (
-              <GithubRepoCard repo={repo} key={repo.id} darkMode={darkMode} />
+              <GithubRepoCard
+                repo={repo}
+                key={repo.id}
+                darkMode={darkMode}
+                index={idx}
+              />
             );
           })}
         </div>

@@ -4,8 +4,12 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import ProjectPreview from '../ProjectPreview/ProjectPreview';
 import { useState } from 'react';
 
-export default function GithubRepoCard({ repo, darkMode }) {
+export default function GithubRepoCard({ repo, darkMode, index }) {
   const [showModal, setShowModal] = useState(false);
+  let reminder = 0;
+  if (index % 2 == 1) {
+    reminder = 1;
+  }
   function openRepoinNewTab(url) {
     if (url) {
       window.open(url, '_blank');
@@ -15,6 +19,7 @@ export default function GithubRepoCard({ repo, darkMode }) {
   return (
     <div
       className={styles.repoCardDiv}
+      data-aos={reminder ? 'fade-left' : 'fade-right'}
       style={{
         backgroundColor: darkMode ? 'rgb(0, 86, 161)' : '#A6E1FA',
         cursor: repo.url ? 'pointer' : 'default',

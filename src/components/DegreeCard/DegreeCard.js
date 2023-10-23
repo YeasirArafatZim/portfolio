@@ -12,6 +12,7 @@ const DegreeCard = ({ degree, darkMode }) => {
           style={{ borderRadius: '50%' }}
         >
           <div
+            data-aos="flip-left"
             className={styles.cardImg}
             style={{
               boxShadow: darkMode
@@ -34,6 +35,7 @@ const DegreeCard = ({ degree, darkMode }) => {
       )}
 
       <div
+        data-aos="fade-left"
         className={styles.cardBody}
         style={{
           width: degree.logo_path ? '90%' : '100%',

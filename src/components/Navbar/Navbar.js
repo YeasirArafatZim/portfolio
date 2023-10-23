@@ -69,7 +69,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           <div className={'offcanvas-body'}>
             <div className={'container'}>
               <Image
-                src="./img/profile.jpg"
+                src="./img/profile2.jpg"
                 alt="Picture of the author"
                 width={220}
                 height={300}

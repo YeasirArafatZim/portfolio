@@ -1,6 +1,8 @@
 .mainDiv {
   display: flex;
   overflow: hidden;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .skillsHeader {
@@ -19,6 +21,7 @@
 
 .textDiv {
   margin-left: 50px;
+  height: auto;
   font-family: 'Poppins';
 }
 
@@ -26,11 +29,9 @@
   flex: 1;
   margin-bottom: 30px;
 }
-
 .imageDiv > * {
   max-width: 100%;
   height: auto;
-  margin-top: 100px;
 }
 
 .heading {
@@ -95,10 +96,7 @@
     font-size: 16px;
   }
   .imageDiv {
-    order: 2;
-  }
-  .imageDiv > * {
-    margin-top: 0px;
+    order: 2 !important;
   }
 }
 @media (max-width: 500px) {
