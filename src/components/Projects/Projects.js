@@ -24,7 +24,10 @@ export default function Projects({ darkMode }) {
             );
           })}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+        <div
+          style={{ textAlign: 'center', marginTop: '40px' }}
+          data-aos="zoom-in"
+        >
           <button
             onClick={() =>
               window.open('https://github.com/YeasirArafatZim/', '_blank')

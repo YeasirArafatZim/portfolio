@@ -24,6 +24,10 @@
   height: auto;
   font-family: 'Poppins';
 }
+.textDivMargin {
+  margin-left: 0px;
+  margin-right: 50px;
+}
 
 .mainDiv > * {
   flex: 1;
@@ -91,6 +95,9 @@
   .textDiv {
     margin-left: 0px;
     margin: 20px;
+  }
+  .textDivMargin {
+    margin-right: 0px;
   }
   .skillsText {
     font-size: 16px;

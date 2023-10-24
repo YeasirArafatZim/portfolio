@@ -46,7 +46,9 @@ export default function SkillSection({ darkMode }) {
             </div>
 
             <div
-              className={styles.textDiv}
+              className={`${styles.textDiv} ${
+                reminder ? styles.textDivMargin : ''
+              }`}
               data-aos={`${reminder ? 'fade-right' : 'fade-left'}`}
             >
               <h1
