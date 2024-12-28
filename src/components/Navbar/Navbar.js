@@ -2,6 +2,7 @@
 import styles from './Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 // FontAwesome Icons
 import { FaBars, FaGitSquare } from 'react-icons/fa';
@@ -10,6 +11,23 @@ import { ImLinkedin } from 'react-icons/im';
 import { SiGmail } from 'react-icons/si';
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
+  const [changeBg, setChangeBg] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 140) {
+      setChangeBg(true);
+    } else {
+      setChangeBg(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const uncheckedSideMenu = () => {
     const elementToUnchecked = document.getElementById('check-box');
     if (elementToUnchecked) {
@@ -20,7 +38,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
   return (
     <>
       <nav
-        className={`sticky-top ${styles.nav} ${darkMode ? styles.navDark : ''}`}
+        className={`fixed-top ${styles.nav} ${changeBg ? styles.navBg : ''} ${darkMode ? styles.navDark : ''}`}
       >
         <input type="checkbox" id="check-box" className={styles.checkBox} />
         <label
@@ -33,9 +51,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         {/* <!-- Offcanvas Section --> */}
 
         <button
-          className={`navbar-toggler ${styles.navIcon} ${
-            darkMode ? styles.navIconDark : ''
-          } ${styles.address}`}
+          className={`navbar-toggler ${styles.navIcon} ${darkMode ? styles.navIconDark : ''
+            } ${styles.address}`}
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -50,6 +67,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           aria-labelledby="offcanvasNavbarLabel"
           data-bs-theme={darkMode ? 'dark' : ''}
           data-bs-scroll="true"
+          style={{ height: '100vh' }}
         >
           <div className={'offcanvas-header'}>
             <h5
@@ -149,9 +167,8 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             <div className={styles.btnDiv}>
               <button
                 onClick={() => window.open('./resume.pdf', '_blank')}
-                className={`btn ${styles.btn} ${
-                  darkMode ? styles.btnDark : ''
-                }`}
+                className={`btn ${styles.btn} ${darkMode ? styles.btnDark : ''
+                  }`}
               >
                 My Resume
               </button>
